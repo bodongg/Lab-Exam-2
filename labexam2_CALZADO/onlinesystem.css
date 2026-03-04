@@ -1,0 +1,186 @@
+:root {
+    --bg: #f8f9fc;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #7c8798;
+    --line: #e6e9ef;
+    --primary: #168bff;
+    --edit: #3f87ff;
+    --delete: #f26484;
+    --tag: #22d3ee;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 28px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.msg {
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border: 1px solid #bfdefe;
+    background: #eef6ff;
+    color: #174a7e;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 28px;
+}
+
+.panel-title {
+    font-size: 30px;
+    margin: 0 0 4px;
+    font-weight: 700;
+}
+
+.small {
+    color: var(--muted);
+    margin: 0 0 18px;
+    font-size: 13px;
+}
+
+.form-title {
+    margin: 0 0 16px;
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    color: #3c4552;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.form-group input[type="date"] {
+    min-height: 42px;
+    color: #1f2937;
+}
+
+.submit-btn {
+    margin-top: 8px;
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 11px;
+    color: #fff;
+    background: linear-gradient(90deg, #1289ff, #1d76f2);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th {
+    text-align: left;
+    color: #445063;
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--line);
+    padding: 6px 6px 12px;
+}
+
+td {
+    padding: 14px 6px;
+    border-bottom: 1px solid #f1f3f8;
+    vertical-align: top;
+    font-size: 25px;
+}
+
+.name-main {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+
+.name-sub {
+    color: var(--muted);
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+.course-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--tag);
+    color: #124557;
+    font-size: 20px;
+    text-transform: lowercase;
+}
+
+.actions a {
+    text-decoration: none;
+    margin-right: 8px;
+    font-size: 25px;
+}
+
+.edit-link {
+    color: var(--edit);
+}
+
+.delete-link {
+    color: var(--delete);
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-title {
+        font-size: 22px;
+    }
+
+    th,
+    td {
+        font-size: 14px;
+    }
+
+    .actions a {
+        font-size: 14px;
+    }
+
+    .name-sub,
+    .course-tag {
+        font-size: 12px;
+    }
+}
